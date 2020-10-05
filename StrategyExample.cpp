@@ -1,11 +1,10 @@
 #include <iostream>
 
-
 using namespace std;
 
 class Strategy {
     public:
-      virtual int doOperation(int num1, int num2)=0;
+      virtual int doOperation(int num1, int num2) = 0;
 };
 
 class OperationAdd:public Strategy {
@@ -48,7 +47,6 @@ class Context {
       return strategy->doOperation(num1, num2);
    }
 };
-
 
 int main() {
   OperationAdd add_strategy;
